@@ -27,6 +27,9 @@ function sigmoid(x){
       this.bias_ho.randomize();
       // learning rate
       this.lr = 1;
+
+      // useful variables
+      this.total_trained = 0;
     }
     
     reset(){
@@ -119,6 +122,7 @@ function sigmoid(x){
       // print("Output Error(answers - guess): ");
       // output_errors.print();    
       // print("Hidden Error(answers - guess): ");
-      // hidden_errors.print();    
+      // hidden_errors.print();
+      this.total_trained++;    
     }
   }
